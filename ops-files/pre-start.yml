@@ -1,0 +1,21 @@
+- type: replace
+  path: /instance_groups/name=jumpbox/jobs/name=pre-start?
+  value:
+    name: pre-start-script
+    release: os-conf
+    properties:
+      script: |-
+        #!/bin/bash
+        cat <<'EOF' > /etc/profile.d/00-openjdk.sh
+        export JAVA_HOME=/var/vcap/packages/java
+        export PATH=${PATH}:${JAVA_HOME}/bin
+        EOF
+        cat <<'EOF' > /etc/profile.d/00-jq.sh
+        export PATH=${PATH}:/var/vcap/packages/toolbelt-jq/bin
+        EOF
+        cat <<'EOF' > /etc/profile.d/00-mysql-client.sh
+        export PATH=${PATH}:/var/vcap/packages/toolbelt-mysql-client/bin
+        EOF
+        cat <<'EOF' > /etc/profile.d/00-psql.sh
+        export PATH=${PATH}:/var/vcap/packages/toolbelt-psql/bin
+        EOF

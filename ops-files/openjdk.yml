@@ -1,0 +1,14 @@
+- type: replace
+  path: /releases/name=openjdk?
+  value:
+    name: openjdk
+    version: ((openjdk_version))
+    url: https://github.com/making/openjdk-boshrelease/releases/download/((openjdk_version))/openjdk-boshrelease-((openjdk_version)).tgz
+    sha1: ((openjdk_sha1))
+
+- type: replace
+  path: /instance_groups/name=jumpbox/jobs/name=java?
+  value:
+    name: java
+    release: openjdk
+    properties: {}

@@ -1,0 +1,46 @@
+{
+    "director_id": "7517d869-335b-45d9-78b1-a62747e8fad3",
+    "installation_id": "b8992194-c39e-4113-4481-31f5a08dddb4",
+    "current_vm_cid": "i-0e033157bf733dd38",
+    "current_stemcell_id": "5cb698cd-9583-4ab8-55f9-a993c23fd9ab",
+    "current_disk_id": "",
+    "current_release_ids": [
+        "73c65b94-15cd-4e85-7243-b78056af4987",
+        "2220b5f1-3871-4593-7e71-b0834d422db2",
+        "860d0650-7238-45a9-5d31-65a91e28ec60",
+        "7d66dd64-4c96-4e7d-6600-9f18f1b08fbb"
+    ],
+    "current_manifest_sha": "3ec70392089c64b783072e517c509acb47ef0ed02d4c089a12a8fb52b49f4d529e2006eb7b8a0c84bc3d3e84f70cf4260550f8ad7c5dc85d85df62dae9e2e5f8",
+    "disks": null,
+    "stemcells": [
+        {
+            "id": "5cb698cd-9583-4ab8-55f9-a993c23fd9ab",
+            "name": "bosh-aws-xen-hvm-ubuntu-xenial-go_agent",
+            "version": "250.17",
+            "api_version": 2,
+            "cid": "ami-0110a94a413f1f4a6 light"
+        }
+    ],
+    "releases": [
+        {
+            "id": "73c65b94-15cd-4e85-7243-b78056af4987",
+            "name": "os-conf",
+            "version": "20"
+        },
+        {
+            "id": "2220b5f1-3871-4593-7e71-b0834d422db2",
+            "name": "bosh-aws-cpi",
+            "version": "73"
+        },
+        {
+            "id": "860d0650-7238-45a9-5d31-65a91e28ec60",
+            "name": "openjdk",
+            "version": "11.0.2"
+        },
+        {
+            "id": "7d66dd64-4c96-4e7d-6600-9f18f1b08fbb",
+            "name": "toolbelt",
+            "version": "3.4.2"
+        }
+    ]
+}
